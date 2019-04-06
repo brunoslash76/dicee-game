@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rollDiceBtnPress(_ sender: UIButton) {
-        self.updateDiceImages() 
+        self.updateDiceImages()
     }
     
     func updateDiceImages(){
@@ -41,6 +41,10 @@ class ViewController: UIViewController {
         
         dice1.image = UIImage(named: diceArray[randomDiceIndex1])
         dice2.image = UIImage(named: diceArray[randomDiceIndex2])
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        self.updateDiceImages()
     }
     
 }
